@@ -5,25 +5,22 @@
    <title>Multitouch Test</title>
   </head>
   <body>
-   <div style="width:80%; height: 200px; border: 1px solid black; font-size: 5em;" id="box">
+   <div style="width:100%; height: 550px; border: 2px solid black; font-size: 5em;" id="box">
    </div>
-   Touch inside the box. On a touch enabled browser, you will get the number
-   of detected touch events. If the box is red, your browser does not support
-   touch events.
-   
-<!--   <script>
+
+  <script>
     var box = document.getElementById("box");
     box.addEventListener("touchstart", function(evt) {
-        box.innerHTML = evt.touches.length;
+        box.style.backgroundColor = "green";
         evt.preventDefault();
     });    
     box.addEventListener("touchmove", function(evt) {
-        box.innerHTML = evt.touches.length;
+        box.style.backgroundColor = "blue";
         evt.preventDefault();
     });    
     if (!(typeof box.ontouchstart != 'undefined')) { 
         box.style.backgroundColor = "red";
     }    
-  </script> -->
+  </script>
   </body>
 </html>  
