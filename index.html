@@ -10,11 +10,11 @@
 
   <script>
     var box = document.getElementById("box");
-    box.addEventListener("touchstart", function(evt) {
+    box.addEventListener("ontouchstart", function(evt) {
         box.style.backgroundColor = "green";
         evt.preventDefault();
     });    
-    box.addEventListener("touchmove", function(evt) {
+    box.addEventListener("ontouchmove", function(evt) {
         box.style.backgroundColor = "blue";
         evt.preventDefault();
     });    
