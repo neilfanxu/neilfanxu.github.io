@@ -7,6 +7,7 @@
   <body>
    <div style="width:100%; height: 550px; border: 2px solid black; font-size: 5em;" id="box">
    </div>
+   <p>The horizontal and vertical coordinates of the touch are: <span id="demo"></span></p>
    version: 1
 
   <script>
@@ -22,6 +23,11 @@
     if (!(typeof box.ontouchstart != 'undefined')) { 
         box.style.backgroundColor = "red";
     }    
+	function showCoordinates(event) {
+	  var x = event.touches[0].clientX;
+	  var y = event.touches[0].clientY;
+	  document.getElementById("demo").innerHTML = x + ", " + y;
+	}
   </script>
   </body>
 </html>  
