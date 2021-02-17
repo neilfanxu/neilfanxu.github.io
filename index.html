@@ -12,14 +12,14 @@
 
   <script>
     var box = document.getElementById("box");
-    box.addEventListener("touchstart", function(evt) {
+    body.addEventListener("touchstart", function(evt) {
         box.style.backgroundColor = "green";
 		var x = evt.touches[0].clientX;
 		var y = evt.touches[0].clientY;
 		document.getElementById("demo").innerHTML = x + ", " + y;
         evt.preventDefault();
     });    
-    box.addEventListener("touchend", function(evt) {
+    body.addEventListener("touchend", function(evt) {
         box.style.backgroundColor = "blue";
 		document.getElementById("demo").innerHTML = "0 " + ", " + "0 ";
         evt.preventDefault();
